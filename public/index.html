@@ -2,6 +2,9 @@
 <html>
 <head>
 <title>TrendView</title>
+
+<link href="main.css" rel="stylesheet">
+
 </head>
 <body>
 <div class="header">
@@ -16,10 +19,17 @@
 
 <div class="search">
   <input type="text" name="trend idea" placeholder="Trend Idea">
-  <button type="search" name="Search">Search</button>
+  <button id = "search" type="search" name="Search">Search</button>
 </div>
 <canvas height="375" width="750" style="display: block; width: 750px; height: 375px;" class="chartjs-render-monitor"></canvas>
 
+<div id= "main_container">
+  Hello Test
+
+</div>
+<div id= "content2">
+
+</div>
 <p class="important">hello</p>
 <h1 id="there-can-only-be-one">nahhh</h1>
 //an id becomes a variable in javascript whereas a class
@@ -32,35 +42,11 @@
 
 </table>
 
+
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+<script src="trendsearch.js"></script>
+
+
+
 </body>
 </html>
-
-<style>
-body{
-  background-color: grey;
-  color: white;
-}
-.header{
-  text-align: center;
-}
-.search{
-  text-align: center;
-  padding-top: 25px;
-}
-.social{
-  color: white;
-  text-decoration: none;
-  background-color: transparent;
-}
-.bg-image{
-  background-image: url("homepagepic.png");
-}
-#article{
-  text-align: left;
-  color:black;
-}
-#logo{
-  height:100px;
-  float:left;
-}
-</style>

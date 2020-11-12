@@ -1,0 +1,27 @@
+body{
+  background-color: grey;
+  color: white;
+}
+.header{
+  text-align: center;
+}
+.search{
+  text-align: center;
+  padding-top: 25px;
+}
+.social{
+  color: white;
+  text-decoration: none;
+  background-color: transparent;
+}
+.bg-image{
+  background-image: url("homepagepic.png");
+}
+#article{
+  text-align: left;
+  color:black;
+}
+#logo{
+  height:100px;
+  float:left;
+}
