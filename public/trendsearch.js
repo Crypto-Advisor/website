@@ -16,7 +16,10 @@ function requestHomeContent() {
 }
 
 function googleTrend(trend) {
-  trends.embed.renderExploreWidget("TIMESERIES", {
+  //we want to render the widget inside the main_container div, so we use renderExploreWidgetTo.
+  var main_container = document.getElementById("main_container");
+  unloadContent()
+  trends.embed.renderExploreWidgetTo(main_container, "TIMESERIES", {
     "comparisonItem": [{
       "keyword": trend,
       "geo": "US",
