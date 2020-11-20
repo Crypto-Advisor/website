@@ -1,49 +1,53 @@
 <!DOCTYPE html>
 <html>
-<head>
-<title>TrendView</title>
 
-<link href="main.css" rel="stylesheet">
+<head>
+  <title>TrendView</title>
+
+  <link href="main.css" rel="stylesheet">
 
 </head>
+
 <body>
-<div class="header">
-  <h1>TrendView</h1>
+  <div class="header">
+    <h1>TrendView</h1>
+    <br>
+    Follow Us Below
+    <br>
+    <button class="social">Twitter</button> |
+    <button class="social">Reddit</button> |
+    <button class="social" id="game"> Play A Game </button> |
+    <button class="social"><a href="https://github.com/Crypto-Advisor/website">GitHub</a> </button> |
+    <button class="social"><a href="https://docs.google.com/document/d/1TmMsFUQFVW_aln7kUgNAzYPMPTPiD3MYcqbYIpZ7LAg/edit?usp=sharing">Tech Spec</a> </button>
+    <br>
+  </div>
+
+  <div class="search">
+    <input type="text" id="searchValue" name="trend idea" placeholder="Trend Idea">
+    <button id="search" type="search" name="Search">Search</button>
+  </div>
+
+
+
+
+  <button class=social id="5years"> 5 years </button>
+  <button class=social id="12months"> 12 months </button>
+
+  <button class=social id="90days"> 90 days </button>
   <br>
-  Follow Us Below
-  <br>
-  <button class="social">Twitter</button> |
-  <button class="social">Reddit</button> |
-  <button class="social" id="game"> Play A Game </button> |
-  <button class="social"><a href="https://github.com/Crypto-Advisor/website">GitHub</a> </button> |
-  <button class="social"><a href="https://docs.google.com/document/d/1TmMsFUQFVW_aln7kUgNAzYPMPTPiD3MYcqbYIpZ7LAg/edit?usp=sharing">Tech Spec</a> </button>
-  <br>
-</div>
+  <div id="main_container">
+  </div>
+  <div id="game_content">
 
-<div class="search">
-  <input type="text" id="searchValue" name="trend idea" placeholder="Trend Idea">
-  <button id = "search" type="search" name="Search">Search</button>
-</div>
+  </div>
 
-
-
-
-<div id= "main_container">
-
-
-
-
-</div>
-<div id= "game_content">
-
-</div>
-
-<script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2402_RC03/embed_loader.js"></script>
-<script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
-<script src="trendsearch.js"></script>
-<script src="game.js"></script>
+  <script type="text/javascript" src="https://ssl.gstatic.com/trends_nrtr/2402_RC03/embed_loader.js"></script>
+  <script src="https://code.jquery.com/jquery-3.5.1.min.js" crossorigin="anonymous"></script>
+  <script src="trendsearch.js"></script>
+  <script src="game.js"></script>
 
 
 
 </body>
+
 </html>

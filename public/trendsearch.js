@@ -15,28 +15,34 @@ function requestHomeContent() {
   });
 }
 
-function googleTrend(trend) {
+function googleTrend(trend, time = "today 12-m") {
   //we want to render the widget inside the main_container div, so we use renderExploreWidgetTo.
   var main_container = document.getElementById("main_container");
-  unloadContent()
+  unloadContent();
   trends.embed.renderExploreWidgetTo(main_container, "TIMESERIES", {
     "comparisonItem": [{
       "keyword": trend,
       "geo": "US",
-      "time": "today 12-m"
+      "time": time
     }],
     "category": 0,
     "property": ""
   }, {
-    "exploreQuery": "q=twitter&geo=US&date=today 12-m",
+    "exploreQuery": "q=twitter&geo=US&date=" + time,
     "guestPath": "https://trends.google.com:443/trends/embed/"
   });
 }
 
-function searchTerm() {
+function searchTerm(input) {
   var searchBar = document.getElementById("searchValue");
   search = searchBar.value;
-  googleTrend(search);
+  var time;
+  if (!input.data) {
+    time = "today 12-m";
+  } else {
+    time = input.data.time;
+  }
+  googleTrend(search, time);
 }
 
 function changeSomeHtml() {
@@ -52,3 +58,15 @@ $("#game").click(function() {
     success: loadContent()
   });
 })
+
+$("#90days").click({
+  time: "today 3-m"
+}, searchTerm);
+
+$("#12months").click({
+  time: "today 12-m"
+}, searchTerm);
+
+$("#5years").click({
+  time: "today 5-y"
+}, searchTerm);
