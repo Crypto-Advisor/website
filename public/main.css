@@ -1,28 +1,34 @@
-body{
+body {
   background-color: grey;
   color: white;
 }
-.header{
+
+.header {
   text-align: center;
 }
-.search{
+
+.search {
   text-align: center;
   padding-top: 25px;
   padding-bottom: 25px;
 }
-.social{
+
+.social {
   color: white;
   text-decoration: none;
   background-color: transparent;
 }
-.bg-image{
+
+.bg-image {
   background-image: url("homepagepic.png");
 }
-#article{
+
+#article {
   text-align: left;
-  color:black;
+  color: black;
 }
-#logo{
-  height:100px;
-  float:left;
+
+#logo {
+  height: 100px;
+  float: left;
 }
