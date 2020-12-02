@@ -52,12 +52,7 @@ function changeSomeHtml() {
 $("#search").click(searchTerm);
 
 $("#homebutton").click(requestHomeContent());
-$("#game").click(function() {
-  $.ajax({
-    url: "public/game.html",
-    success: loadContent()
-  });
-})
+
 
 $("#90days").click({
   time: "today 3-m"
@@ -70,3 +65,15 @@ $("#12months").click({
 $("#5years").click({
   time: "today 5-y"
 }, searchTerm);
+
+$("#game").click(requestGameContent);
+
+function openGame(){
+  $("#game").click(requestGameContent);
+}
+function requestGameContent(){
+  $.ajax({url: "game.html", success: loadGameContent});
+}
+function loadGameContent(result){
+  $("#game_content").html(result);
+}

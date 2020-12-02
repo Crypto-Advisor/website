@@ -1,9 +1,24 @@
-<button><<a href="index.html">Home</a></button>
+<!DOCTYPE html>
+<html>
+<body>
+<script src="game.js"></script>
+  <div class="game-outer-div">
+    <button id="remove_game">Close Game</button>
+    <canvas id="main_game" class="main-game-canvas" width="1000" height="700"></canvas>
+    <div id="game_content">
 
-<div class="game-outer-div">
-  <button id="game-Button">Play A Game</button>
-  <canvas id="main_game" class="main-game-canvas" width="1000" height="700"></canvas>
-  <div id="game_content">
+    </div>
+    </div>
+</body>
+</html>
 
-  </div>
-</div>
+<style>
+  .main-game-canvas {
+    padding-top: 5px;
+    margin: 35px 30px;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
