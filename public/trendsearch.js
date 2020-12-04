@@ -14,6 +14,12 @@ function requestHomeContent() {
     success: loadContent()
   });
 }
+function requestJsonContent(){
+  $.ajax({
+    url: "jsonTest.html",
+    success: loadContent()
+  });
+}
 
 function googleTrend(trend, time = "today 12-m") {
   //we want to render the widget inside the main_container div, so we use renderExploreWidgetTo.
@@ -53,6 +59,7 @@ $("#search").click(searchTerm);
 
 $("#homebutton").click(requestHomeContent());
 
+$("#json_test").click(requestJsonContent());
 
 $("#90days").click({
   time: "today 3-m"
@@ -76,4 +83,16 @@ function requestGameContent(){
 }
 function loadGameContent(result){
   $("#game_content").html(result);
+}
+function loadTwitterRss(result){
+  result = xmlToJson(result);
+  $("#twitter_rss").html(result);
+}
+function requestTwitterRss(){
+  $.ajax({
+    dataType: "xml",
+    url: "https://twitrss.me/twitter_search_to_rss/?term=purple+mattress",
+    success: loadTwitterRss
+
+  });
 }
